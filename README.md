@@ -1,4 +1,4 @@
-# punk-beer
+# Punk Beer Application
 
 Application for browsing the large database of beers provided by the Punk Beer API.
 
@@ -6,8 +6,18 @@ Application for browsing the large database of beers provided by the Punk Beer A
 
 Everything is by-the-book Vue application. Using the CLI, it is a basic application with the Vue Router added and a few other dependencies.
 
-### Install everything
+### Prerequisites
 
+- npm
+
+### Installation
+
+1. clone the repo
+```
+git clone https://github.com/chuckyroh/punk-beer.git
+```
+
+2. install all packages
 ```
 npm install
 ```
