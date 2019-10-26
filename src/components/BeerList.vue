@@ -1,17 +1,37 @@
 <template>
-	<div class="beers">
-		<h2>Page: {{ page }}</h2>
-		<div>
-			<button @click="goPrevPage" v-show="this.page > 1">Prev</button>
-			<button @click="goNextPage">Next</button>
-		</div>
-		<ul>
-			<li v-for="beer in beers" :key="beer.id">
-				<img :src="beer.image_url">
-				<h3>{{ beer.name }} - <small>{{ beer.tagline }}</small></h3>
-			</li>
-		</ul>
-	</div>
+	<v-row class="beers">
+		<v-col cols="12">
+			<v-row justify="center">
+				<v-col cols="6">
+					<h2 class="text-center">Page: {{ page }}</h2>
+				</v-col>
+			</v-row>
+			<v-row justify="center">
+				<v-col cols="6" class="text-center">
+					<v-btn class="mx-1" @click="goPrevPage" v-show="this.page > 1">Prev</v-btn>
+					<v-btn class="mx-1" @click="goNextPage">Next</v-btn>
+				</v-col>
+			</v-row>
+			<v-row justify="center">
+				<v-col cols="12">
+					<v-item-group>
+						<v-container>
+							<v-row justify="center">
+								<v-col cols="2" v-for="beer in beers" :key="beer.id">
+									<v-item>
+										<v-card class="pa-2 text-center" color="grey lighten-3">
+											<img :src="beer.image_url">
+											<p>{{ beer.name }}</p>
+										</v-card>
+									</v-item>
+								</v-col>
+							</v-row>
+						</v-container>
+					</v-item-group>
+				</v-col>
+			</v-row>
+		</v-col>
+	</v-row>
 </template>
 
 <script>
